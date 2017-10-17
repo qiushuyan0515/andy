@@ -1,0 +1,442 @@
+/*css reset*/
+html {
+    font-size: 12px;
+}
+
+/*屏幕为480px*/
+@media screen and (min-width: 480px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/*屏幕为640px*/
+@media screen and (min-width: 640px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+/*屏幕为768px*/
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+/*屏幕为960x*/
+@media screen and (min-width: 960px) {
+    html {
+        font-size: 28px;
+    }
+}
+
+/*css public*/
+.container {
+    background-color: #eee;
+}
+
+header, nav, .container, .slider-wrap, .product-list, .offer-introduction, .news, .merchant-wrap, .slider-wrap {
+    width: 100%;
+    position: relative;
+}
+
+.bottom-bar, .product-list, .offer-introduction, .news, .merchant-wrap {
+    background-color: #fff;
+}
+
+header {
+    height: 3.75rem;
+    line-height: 3.75rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #f04848;
+    color: #fff;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.bottom-bar {
+    position: relative;
+}
+
+.bottom-bar:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    transform: scaleY(.5);
+    background-color: #ddd;
+    left: 0;
+    top: 0;
+}
+
+.bottom-bar:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.bottom-bar li {
+    float: left;
+    width: 25%;
+}
+
+.bottom-bar li a {
+    display: block;
+    background-color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    padding: .5rem 0;
+}
+
+.bottom-bar li a i {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background-color: #c8c8c8;
+    margin: 0 auto 5px;
+    border-radius: 50%;
+}
+
+.bottom-bar li a.active i {
+    background-color: #f04848;
+}
+
+.bottom-bar li a.active {
+    color: #f04848;
+}
+
+/*slider*/
+.slider-wrap {
+    overflow: hidden;
+}
+
+.slider-wrap li {
+    float: left;
+}
+
+.slider-list {
+    width: 200%;
+    position: relative;
+}
+
+.slider-list:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.slider-list li {
+    width: 50%;
+}
+
+.dot-list {
+    position: absolute;
+    bottom: .5rem;
+    left: 50%;
+    margin-left: -1.1rem;
+}
+
+.dot-list li {
+    width: .85rem;
+    height: .85rem;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: .5rem;
+    box-shadow: .2rem .2rem .1rem rgba(0, 0, 0, 0.2) inset
+}
+
+.dot-list li:last-child {
+    margin-right: 0;
+}
+
+.dot-list li.active {
+    background-color: #f6a5a5;
+}
+
+/*product*/
+.product-list:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.product-list li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.product-list li a {
+    display: block;
+    margin: 1.6667rem 0 1.25rem;
+}
+
+.product-list li a h3 {
+    font-size: 1rem;
+}
+
+.product-list .icon {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.product-list .icon.icon-1 {
+    background-color: #f46666;
+}
+
+.product-list .icon.icon-2 {
+    background-color: #f4d547;
+}
+
+.product-list .icon.icon-3 {
+    background-color: #6ec1e8;
+}
+
+.product-list .icon.icon-4 {
+    background-color: #65df88;
+}
+
+/*offer*/
+.offer-introduction {
+    margin-top: 1rem;
+}
+
+.offer-introduction:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.offer-introduction .left, .offer-introduction .right {
+    width: 50%;
+    float: left;
+    text-align: center;
+    height: 8.75rem;
+    position: relative;
+}
+
+.offer-introduction .left:after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    transform: scaleX(.5);
+    background-color: #eee;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.offer-introduction .text-wrap {
+    padding-top: 1rem;
+}
+
+.offer-introduction .text-wrap h3 {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+.offer-introduction .text-wrap p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.offer-introduction .left .text-wrap {
+    height: 100%;
+}
+
+.offer-introduction .left .text-wrap h3 {
+    color: #fc866a;
+}
+
+.offer-introduction .right .text-wrap {
+    height: 50%;
+    position: relative;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.offer-introduction .right .text-wrap:first-child h3 {
+    color: #fc9424;
+}
+
+.offer-introduction .right .text-wrap:first-child:after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    transform: scaleY(.5);
+    background-color: #eee;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.offer-introduction .right .text-wrap:last-child h3 {
+    color: #f77387;
+}
+
+/*news*/
+.news {
+    margin-top: 1rem;
+    padding: 0 1.25rem;
+}
+
+.news:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.news .commodity, .news .state {
+    float: left;
+}
+
+.news .commodity {
+    width: 75%;
+}
+
+.news .state {
+    width: 25%;
+}
+
+.commodity {
+    position: relative;
+}
+
+.commodity .pic, .commodity .information {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.commodity .pic {
+    float: left;
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ddd;
+}
+
+.commodity .information {
+}
+
+.commodity .information h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: .4rem;
+    padding-top: .2rem;
+}
+
+.state {
+    text-align: center;
+}
+
+.state em {
+    font-size: 1rem;
+    color: #f77387;
+    padding: 2px 5px;
+    border: 1px solid #f77387;
+    line-height: 4rem;
+}
+
+/*merchant*/
+.merchant-wrap {
+    margin-top: 1rem;
+    padding: 0 1.25rem 4.5rem;
+}
+
+.merchant-box {
+    display: block;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.merchant-box:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.merchant-box .left, .merchant-box .center {
+    float: left;
+}
+
+.merchant-box .left {
+    width: 5rem;
+    height: 5rem;
+    background-color: #c8c8c8;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.merchant-box .name {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.merchant-box .middle, .merchant-box .bottom {
+    margin-bottom: .5rem;
+}
+
+.merchant-box .bottom .open {
+    color: #333;
+}
+
+.merchant-box .bottom .open, .merchant-box .share, .merchant-box .bottom em, .merchant-box .bottom span {
+    font-size: 1rem;
+}
+
+.merchant-box .share, .merchant-box .bottom em, .merchant-box .bottom span {
+    color: #c8c8c8;
+}
+
+.merchant-box .right {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.merchant-box .right span, .merchant-box .right em {
+    display: block;
+}
+
+.merchant-box .right h3 {
+    margin-top: .3rem;
+}
+
+.merchant-box .right h3, .merchant-box .discount {
+    color: #f77387;
+    text-align: center;
+}
+
+.merchant-box .time {
+    color: #36b0e9;
+    border: 1px solid #36b0e9;
+    padding: .2rem .4rem;
+    border-radius: 10%;
+    margin-top: -.2rem;
+    font-size: 1rem;
+}
+
+.merchant-box .discount {
+    font-size: 2rem;
+    margin-top: .1rem;
+}
+
+.merchant-box .discount span {
+    display: inline;
+    font-size: 1rem;
+}
